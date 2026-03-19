@@ -20,7 +20,7 @@ function FeatureIcon() {
     <div className="relative shrink-0 w-12 h-12 sm:w-14 sm:h-14">
       <div
         className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full animate-warn-blink"
-        style={{ background: "#c2410c" }}
+        style={{ background: "#fdba74" }}
       />
       <div
         className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center animate-warn-blink"
