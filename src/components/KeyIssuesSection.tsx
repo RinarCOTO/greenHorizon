@@ -19,8 +19,8 @@ function FeatureIcon() {
   return (
     <div className="relative shrink-0 w-12 h-12 sm:w-14 sm:h-14">
       <div
-        className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full opacity-90 animate-warn-blink"
-        style={{ background: "rgba(168,227,4,0.9)" }}
+        className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full animate-warn-blink"
+        style={{ background: "rgb(239,68,68)" }}
       />
       <div
         className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center"
