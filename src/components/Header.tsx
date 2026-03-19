@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 
 const navItems = [
   { label: "About", href: "/about" },
-  { label: "Take Action", href: "/take-action" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -30,22 +29,23 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-5 lg:px-10 flex items-center justify-between py-3.5">
 
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5" onClick={() => setMenuOpen(false)}>
-          <Image
-            src="/images/greenHorizonLogo.png"
-            alt="GreenHorizon"
-            width={140}
-            height={40}
-            className="h-10 w-auto object-contain"
-            priority
-          />
-          <span className="text-white font-bold text-base tracking-tight hidden sm:block">GreenHorizon</span>
-        </Link>
+        {/* Logo + Nav grouped together */}
+        <div className="flex items-center gap-6">
+          <Link href="/" className="flex items-center gap-2.5" onClick={() => setMenuOpen(false)}>
+            <Image
+              src="/images/greenHorizonLogo.png"
+              alt="GreenHorizon"
+              width={140}
+              height={40}
+              className="h-10 w-auto object-contain"
+              priority
+            />
+            <span className="text-white font-bold text-base tracking-tight hidden sm:block">GreenHorizon</span>
+          </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1">
-          {navItems.map((item) => (
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-1">
+            {navItems.map((item) => (
             <Link
               key={item.label}
               href={item.href}
@@ -58,7 +58,8 @@ export default function Header() {
               />
             </Link>
           ))}
-        </nav>
+          </nav>
+        </div>
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-3">
