@@ -54,7 +54,7 @@ export default function Footer() {
     <footer style={{ background: "#0a1f0f" }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-8">
 
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-16 mb-12 pb-12 border-b border-white/8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[2fr_1fr_1fr] gap-10 sm:gap-12 lg:gap-16 mb-10 sm:mb-12 pb-10 sm:pb-12 border-b border-white/8">
 
           {/* Brand */}
           <div>

@@ -47,7 +47,7 @@ export default function StandForSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-28 px-6 lg:px-10 overflow-hidden">
+    <section ref={sectionRef} className="relative py-16 sm:py-20 lg:py-28 px-5 sm:px-6 lg:px-10 overflow-hidden">
       <Image
         src="/images/section2Image.jpg"
         alt=""
@@ -59,25 +59,25 @@ export default function StandForSection() {
       <div className="relative max-w-7xl mx-auto">
 
         {/* Header */}
-        <div className="max-w-3xl mb-16">
-          <div className={`flex items-center gap-3 mb-5 ${visible ? "animate-fade-down delay-100" : "opacity-0"}`}>
+        <div className="max-w-3xl mb-10 sm:mb-14 lg:mb-16">
+          <div className={`flex items-center gap-3 mb-4 sm:mb-5 ${visible ? "animate-fade-down delay-100" : "opacity-0"}`}>
             <div className="h-px w-10" style={{ background: "linear-gradient(90deg, rgba(1,140,129,1), rgba(168,227,4,1))" }} />
             <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#269f62" }}>Why We Exist</span>
           </div>
-          <h2 className={`font-extrabold text-[clamp(2rem,4vw,3.5rem)] text-gray-900 leading-tight mb-6 ${visible ? "animate-fade-up delay-200" : "opacity-0"}`}>
-            We believe one person can<br />change everything.
+          <h2 className={`font-extrabold text-[clamp(1.75rem,4vw,3.5rem)] text-gray-900 leading-tight mb-4 sm:mb-6 ${visible ? "animate-fade-up delay-200" : "opacity-0"}`}>
+            We believe one person can<br className="hidden sm:block" />change everything.
           </h2>
-          <p className={`text-gray-600 text-lg leading-relaxed max-w-2xl ${visible ? "animate-fade-up delay-300" : "opacity-0"}`}>
+          <p className={`text-gray-600 text-base sm:text-lg leading-relaxed max-w-2xl ${visible ? "animate-fade-up delay-300" : "opacity-0"}`}>
             Green Begins With One was built for students like you: people who care about the planet but don&apos;t know where to begin. We&apos;re not here to overwhelm you with statistics or guilt you into action. We&apos;re here to show you that the smallest habit, repeated by enough people, becomes a movement.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {cards.map((card, i) => (
             <div
               key={card.title}
-              className={`group relative rounded-3xl overflow-hidden hover:-translate-y-2 hover:shadow-[0_32px_80px_rgba(0,0,0,0.2)] transition-all duration-300 aspect-4/5 ${visible ? `animate-fade-up ${cardDelays[i]}` : "opacity-0"}`}
+              className={`group relative rounded-3xl overflow-hidden hover:-translate-y-2 hover:shadow-[0_32px_80px_rgba(0,0,0,0.2)] transition-all duration-300 aspect-4/5 ${i === 2 ? "sm:col-span-2 lg:col-span-1" : ""} ${visible ? `animate-fade-up ${cardDelays[i]}` : "opacity-0"}`}
             >
               {/* Image */}
               {card.image ? (
@@ -100,7 +100,7 @@ export default function StandForSection() {
 
               {/* Default: title only */}
               <div
-                className="absolute bottom-0 left-0 right-0 px-6 pt-16 pb-6 group-hover:opacity-0 transition-opacity duration-300"
+                className="absolute bottom-0 left-0 right-0 px-5 sm:px-6 pt-16 pb-5 sm:pb-6 group-hover:opacity-0 transition-opacity duration-300"
                 style={{ background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 100%)" }}
               >
                 <h3 className="font-extrabold text-lg text-white">{card.title}</h3>
@@ -108,7 +108,7 @@ export default function StandForSection() {
 
               {/* Hover: title + description */}
               <div
-                className="absolute bottom-0 left-0 right-0 px-6 pt-20 pb-6 opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-300 ease-out"
+                className="absolute bottom-0 left-0 right-0 px-5 sm:px-6 pt-20 pb-5 sm:pb-6 opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-300 ease-out"
                 style={{ background: "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0) 100%)" }}
               >
                 <h3 className="font-extrabold text-lg text-white mb-2">{card.title}</h3>

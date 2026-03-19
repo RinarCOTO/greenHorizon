@@ -34,7 +34,7 @@ export default function NewsletterSection() {
   }
 
   return (
-    <section ref={sectionRef} className="relative py-32 px-6 lg:px-10 overflow-hidden">
+    <section ref={sectionRef} className="relative py-16 sm:py-20 lg:py-32 px-5 sm:px-6 lg:px-10 overflow-hidden">
 
       {/* Background */}
       <div

@@ -17,18 +17,16 @@ const features = [
 
 function FeatureIcon() {
   return (
-    <div className="relative shrink-0 w-14 h-14">
-      {/* Leaf accent */}
+    <div className="relative shrink-0 w-12 h-12 sm:w-14 sm:h-14">
       <div
-        className="absolute -top-1 -right-1 w-5 h-5 rounded-full opacity-80 animate-pulse"
-        style={{ background: "#f97316", boxShadow: "0 0 6px 2px rgba(249,115,22,0.8)" }}
+        className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full opacity-80"
+        style={{ background: "rgba(168,227,4,0.9)" }}
       />
-      {/* Main circle */}
       <div
-        className="w-14 h-14 rounded-full flex items-center justify-center animate-pulse"
-        style={{ background: "#f97316", boxShadow: "0 0 8px 3px rgba(249,115,22,0.8), 0 0 20px 8px rgba(249,115,22,0.4), 0 0 35px 12px rgba(249,115,22,0.2)" }}
+        className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center"
+        style={{ background: "linear-gradient(135deg, rgba(1,140,129,1), #1a7a4a)" }}
       >
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8">
           <path d="M12 3C7 3 3 8 3 12c0 2 1 4 2.5 5.5C7 19 9 20 12 20c4 0 8-3 9-8 0-5-4-9-9-9zm1 13c-3 0-5.5-2-6-5 .5 1 2 2 4 2-1-1-1.5-2.5-1-4 1 2 3 3 5 3-1-1-1-3 0-4 1 2 3 3 3 6-1 1.5-3 2-5 2z" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </div>
@@ -59,13 +57,11 @@ export default function KeyIssuesSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-28 px-6 lg:px-10 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+    <section ref={sectionRef} className="py-16 sm:py-20 lg:py-28 px-5 sm:px-6 lg:px-10 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
 
-        {/* ── Left: Staggered images ── */}
-        <div className="relative h-175">
-
-          {/* Dotted grid background */}
+        {/* Left: Staggered images */}
+        <div className="relative h-80 sm:h-96 lg:h-175 order-2 lg:order-1">
           <div
             className="absolute inset-0 opacity-20"
             style={{
@@ -74,28 +70,27 @@ export default function KeyIssuesSection() {
             }}
           />
 
-          {/* Floating plastic bag */}
-          <div className="absolute top-8 left-1/2 -translate-x-8 animate-float pointer-events-none z-10">
-            <Image src="/images/section4_plasticbag.webp" alt="" width={80} height={120} className="object-contain drop-shadow-lg" aria-hidden="true" />
+          <div className="absolute top-4 left-1/2 -translate-x-8 animate-float pointer-events-none z-10">
+            <Image src="/images/section4_plasticbag.webp" alt="" width={60} height={90} className="object-contain drop-shadow-lg" aria-hidden="true" />
           </div>
-          <div className="absolute top-155 left-1/2 translate-x-2 animate-float-delayed pointer-events-none z-10">
+          <div className="absolute bottom-4 left-1/2 translate-x-2 animate-float-delayed pointer-events-none z-10 lg:hidden">
+            <Image src="/images/section4_bottle.webp" alt="" width={80} height={55} className="object-contain drop-shadow-lg rotate-[-15deg]" aria-hidden="true" />
+          </div>
+          <div className="absolute top-155 left-1/2 translate-x-2 animate-float-delayed pointer-events-none z-10 hidden lg:block">
             <Image src="/images/section4_bottle.webp" alt="" width={120} height={80} className="object-contain drop-shadow-lg rotate-[-15deg]" aria-hidden="true" />
           </div>
 
-          {/* Back image — Earth/nature */}
-          <div className={`absolute top-0 left-0 w-72 h-96 rounded-3xl overflow-hidden shadow-xl border-4 border-white ${visible ? "animate-fade-in delay-200" : "opacity-0"}`}>
+          <div className={`absolute top-0 left-0 w-44 h-60 sm:w-56 sm:h-72 lg:w-72 lg:h-96 rounded-3xl overflow-hidden shadow-xl border-4 border-white ${visible ? "animate-fade-in delay-200" : "opacity-0"}`}>
             <Image src="/images/seciotn4_card1.webp" alt="Climate issue" fill className="object-cover object-center" />
           </div>
 
-          {/* Front image — volunteer/action */}
-          <div className={`absolute bottom-0 right-0 w-80 h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white ${visible ? "animate-fade-in delay-400" : "opacity-0"}`}>
+          <div className={`absolute bottom-0 right-0 w-48 h-60 sm:w-60 sm:h-72 lg:w-80 lg:h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white ${visible ? "animate-fade-in delay-400" : "opacity-0"}`}>
             <Image src="/images/section4_card2.webp" alt="Ocean plastic pollution" fill className="object-cover object-center" />
           </div>
 
-          {/* Floating stat badge */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 animate-float">
             <div
-              className="px-4 py-2.5 rounded-full text-white text-xs font-semibold shadow-lg whitespace-nowrap"
+              className="px-3 py-2 sm:px-4 sm:py-2.5 rounded-full text-white text-xs font-semibold shadow-lg whitespace-nowrap"
               style={{ background: "linear-gradient(90deg, rgba(1,140,129,1), rgba(168,227,4,1))" }}
             >
               🌍 2 Key Issues to Know
@@ -103,13 +98,12 @@ export default function KeyIssuesSection() {
           </div>
         </div>
 
-        {/* ── Right: Text content ── */}
-        <div>
-          {/* Eyebrow */}
-          <div className={`flex items-center gap-2 mb-5 ${visible ? "animate-fade-down delay-100" : "opacity-0"}`}>
+        {/* Right: Text content */}
+        <div className="order-1 lg:order-2">
+          <div className={`flex items-center gap-2 mb-4 sm:mb-5 ${visible ? "animate-fade-down delay-100" : "opacity-0"}`}>
             <div
               className="w-5 h-5 rounded-full flex items-center justify-center animate-pulse"
-              style={{ background: "#f97316", boxShadow: "0 0 8px 3px rgba(249,115,22,0.8), 0 0 20px 8px rgba(249,115,22,0.4), 0 0 35px 12px rgba(249,115,22,0.2)" }}
+              style={{ background: "#facc15", boxShadow: "0 0 10px 3px rgba(250,204,21,0.7), 0 0 20px 6px rgba(250,204,21,0.35)" }}
             >
               <svg width="10" height="10" viewBox="0 0 24 24" fill="white">
                 <path d="M12 3C7 3 3 8 3 12c0 2 1 4 2.5 5.5C7 19 9 20 12 20c4 0 8-3 9-8 0-5-4-9-9-9z" />
@@ -118,20 +112,17 @@ export default function KeyIssuesSection() {
             <span className="text-xs font-semibold tracking-widest uppercase text-gray-500">What&apos;s Driving It</span>
           </div>
 
-          {/* Headline */}
-          <h2 className={`font-extrabold text-[clamp(2rem,3.5vw,3rem)] text-gray-900 leading-tight mb-5 ${visible ? "animate-fade-up delay-200" : "opacity-0"}`}>
+          <h2 className={`font-extrabold text-[clamp(1.75rem,3.5vw,3rem)] text-gray-900 leading-tight mb-4 sm:mb-5 ${visible ? "animate-fade-up delay-200" : "opacity-0"}`}>
             Two issues every young<br />person needs to understand.
           </h2>
 
-          {/* Body */}
-          <p className={`text-gray-500 leading-relaxed mb-8 ${visible ? "animate-fade-up delay-300" : "opacity-0"}`}>
+          <p className={`text-gray-500 leading-relaxed mb-6 sm:mb-8 ${visible ? "animate-fade-up delay-300" : "opacity-0"}`}>
             Climate change has many causes, but two of the biggest are ones we interact with every single day. Understanding them is the first step to doing something about them.
           </p>
 
-          {/* Feature list */}
-          <div className="flex flex-col gap-6 mb-10">
+          <div className="flex flex-col gap-5 sm:gap-6 mb-8 sm:mb-10">
             {features.map((f, i) => (
-              <div key={f.title} className={`flex items-start gap-4 ${visible ? `animate-fade-up ${i === 0 ? "delay-400" : "delay-500"}` : "opacity-0"}`}>
+              <div key={f.title} className={`flex items-start gap-3 sm:gap-4 ${visible ? `animate-fade-up ${i === 0 ? "delay-400" : "delay-500"}` : "opacity-0"}`}>
                 <FeatureIcon />
                 <div>
                   <h4 className="font-bold text-gray-900 mb-1">{f.title}</h4>
@@ -141,7 +132,6 @@ export default function KeyIssuesSection() {
             ))}
           </div>
 
-          {/* CTA */}
           <div className={visible ? "animate-fade-up delay-600" : "opacity-0"}>
             <Link
               href="/about"
