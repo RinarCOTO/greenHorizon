@@ -135,7 +135,7 @@ export default function KeyIssuesSection() {
           <div className={visible ? "animate-fade-up delay-600" : "opacity-0"}>
             <Link
               href="/about"
-              className="inline-flex items-center gap-3 rounded-full pl-7 pr-2 py-2 text-sm font-semibold text-white transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 animate-warn-blink"
+              className="inline-flex items-center gap-3 rounded-full pl-7 pr-2 py-2 text-sm font-semibold text-white transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5"
               style={{ background: "linear-gradient(90deg, rgba(1,140,129,1), rgba(100,180,4,1))" }}
             >
               More About
