@@ -43,8 +43,8 @@ export default function SignupPage() {
         {/* Logo + Quote grouped */}
         <div className="relative z-10 flex flex-col gap-10 justify-center flex-1">
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/images/greenHorizonLogo.png" alt="GreenHorizon" width={40} height={40} className="object-contain" />
-            <span className="text-white font-bold text-lg">GreenHorizon</span>
+            <Image src="/images/greenHorizonLogo.png" alt="GreenHorizon" width={72} height={72} className="object-contain" />
+            <span className="text-white font-bold text-xl">GreenHorizon</span>
           </Link>
 
           <div>

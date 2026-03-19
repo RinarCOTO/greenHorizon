@@ -33,20 +33,21 @@ export default function LoginPage() {
         <div className="absolute top-1/4 right-0 w-80 h-80 rounded-full blur-3xl opacity-20" style={{ background: "rgba(1,140,129,0.8)" }} />
         <div className="absolute bottom-1/4 left-0 w-64 h-64 rounded-full blur-3xl opacity-15" style={{ background: "rgba(168,227,4,0.7)" }} />
 
-        {/* Logo */}
-        <Link href="/" className="relative flex items-center gap-3 z-10">
-          <Image src="/images/greenHorizonLogo.png" alt="GreenHorizon" width={40} height={40} className="object-contain" />
-          <span className="text-white font-bold text-lg">GreenHorizon</span>
-        </Link>
+        {/* Logo + Quote grouped */}
+        <div className="relative z-10 flex flex-col gap-6 justify-center flex-1">
+          <Link href="/" className="flex items-center gap-3">
+            <Image src="/images/greenHorizonLogo.png" alt="GreenHorizon" width={72} height={72} className="object-contain" />
+            <span className="text-white font-bold text-xl">GreenHorizon</span>
+          </Link>
 
-        {/* Quote */}
-        <div className="relative z-10">
-          <p className="text-white font-extrabold leading-tight mb-4" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)" }}>
-            One action.<br />One planet.<br /><span className="gradient-text">One future.</span>
-          </p>
-          <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-            Welcome back. The planet still needs you.
-          </p>
+          <div>
+            <p className="text-white font-extrabold leading-tight mb-4" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)" }}>
+              One action.<br />One planet.<br /><span className="gradient-text">One future.</span>
+            </p>
+            <p className="text-white/60 text-sm leading-relaxed max-w-xs">
+              Welcome back. The planet still needs you.
+            </p>
+          </div>
         </div>
 
         {/* Bottom tagline */}
