@@ -98,17 +98,17 @@ export default function StandForSection() {
                 {String(i + 1).padStart(2, "0")}
               </div>
 
-              {/* Default: title only */}
+              {/* Default: title only (desktop, non-hovered) */}
               <div
-                className="absolute bottom-0 left-0 right-0 px-5 sm:px-6 pt-16 pb-5 sm:pb-6 group-hover:opacity-0 transition-opacity duration-300"
+                className="absolute bottom-0 left-0 right-0 px-5 sm:px-6 pt-16 pb-5 sm:pb-6 opacity-0 sm:opacity-100 group-hover:opacity-0 transition-opacity duration-300"
                 style={{ background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 100%)" }}
               >
                 <h3 className="font-extrabold text-lg text-white">{card.title}</h3>
               </div>
 
-              {/* Hover: title + description */}
+              {/* Always visible on mobile, hover-revealed on desktop */}
               <div
-                className="absolute bottom-0 left-0 right-0 px-5 sm:px-6 pt-20 pb-5 sm:pb-6 opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-300 ease-out"
+                className="absolute bottom-0 left-0 right-0 px-5 sm:px-6 pt-20 pb-5 sm:pb-6 opacity-100 sm:opacity-0 sm:translate-y-3 sm:group-hover:opacity-100 sm:group-hover:translate-y-0 transition-all duration-300 ease-out"
                 style={{ background: "linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0) 100%)" }}
               >
                 <h3 className="font-extrabold text-lg text-white mb-2">{card.title}</h3>
