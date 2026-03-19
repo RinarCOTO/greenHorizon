@@ -103,7 +103,7 @@ export default function KeyIssuesSection() {
           <div className={`flex items-center gap-2 mb-4 sm:mb-5 ${visible ? "animate-fade-down delay-100" : "opacity-0"}`}>
             <div
               className="w-5 h-5 rounded-full flex items-center justify-center animate-pulse"
-              style={{ background: "#facc15", boxShadow: "0 0 10px 3px rgba(250,204,21,0.7), 0 0 20px 6px rgba(250,204,21,0.35)" }}
+              style={{ background: "#fb923c", boxShadow: "0 0 10px 3px rgba(251,146,60,0.7), 0 0 20px 6px rgba(251,146,60,0.35)" }}
             >
               <svg width="10" height="10" viewBox="0 0 24 24" fill="white">
                 <path d="M12 3C7 3 3 8 3 12c0 2 1 4 2.5 5.5C7 19 9 20 12 20c4 0 8-3 9-8 0-5-4-9-9-9z" />
