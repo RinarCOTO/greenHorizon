@@ -51,8 +51,10 @@ service-account*.json
 firebase*.json
 *-service-account*.json
 
-# IDE / OS
+# Claude / AI config
 .claude/
+CLAUDE.md
+AGENTS.md
 .idea/
 .vscode/settings.json
 Thumbs.db
