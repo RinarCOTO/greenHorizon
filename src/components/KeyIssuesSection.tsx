@@ -20,11 +20,11 @@ function FeatureIcon() {
     <div className="relative shrink-0 w-12 h-12 sm:w-14 sm:h-14">
       <div
         className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full animate-warn-blink"
-        style={{ background: "rgb(239,68,68)" }}
+        style={{ background: "#c2410c" }}
       />
       <div
-        className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center"
-        style={{ background: "linear-gradient(135deg, rgba(1,140,129,1), #1a7a4a)" }}
+        className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center animate-warn-blink"
+        style={{ background: "linear-gradient(135deg, #fb923c, #ea580c)" }}
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8">
           <path d="M12 3C7 3 3 8 3 12c0 2 1 4 2.5 5.5C7 19 9 20 12 20c4 0 8-3 9-8 0-5-4-9-9-9zm1 13c-3 0-5.5-2-6-5 .5 1 2 2 4 2-1-1-1.5-2.5-1-4 1 2 3 3 5 3-1-1-1-3 0-4 1 2 3 3 3 6-1 1.5-3 2-5 2z" strokeLinecap="round" strokeLinejoin="round" />
