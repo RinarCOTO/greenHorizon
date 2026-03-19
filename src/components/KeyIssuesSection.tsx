@@ -19,7 +19,7 @@ function FeatureIcon() {
   return (
     <div className="relative shrink-0 w-12 h-12 sm:w-14 sm:h-14">
       <div
-        className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full opacity-80"
+        className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full opacity-90 animate-warn-blink"
         style={{ background: "rgba(168,227,4,0.9)" }}
       />
       <div
@@ -135,7 +135,7 @@ export default function KeyIssuesSection() {
           <div className={visible ? "animate-fade-up delay-600" : "opacity-0"}>
             <Link
               href="/about"
-              className="inline-flex items-center gap-3 rounded-full pl-7 pr-2 py-2 text-sm font-semibold text-white transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-3 rounded-full pl-7 pr-2 py-2 text-sm font-semibold text-white transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 animate-warn-blink"
               style={{ background: "linear-gradient(90deg, rgba(1,140,129,1), rgba(100,180,4,1))" }}
             >
               More About

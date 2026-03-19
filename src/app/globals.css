@@ -120,3 +120,10 @@ body {
 .delay-800  { animation-delay: 1.5s; }
 .delay-900  { animation-delay: 1.7s; }
 .delay-1000 { animation-delay: 1.9s; }
+
+@keyframes warn-blink {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(168,227,4,0); opacity: 1; }
+  50%       { box-shadow: 0 0 0 8px rgba(168,227,4,0.25); opacity: 0.75; }
+}
+
+.animate-warn-blink { animation: warn-blink 1.4s ease-in-out infinite; }
