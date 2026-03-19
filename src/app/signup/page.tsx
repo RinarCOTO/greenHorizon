@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Lock, Eye, EyeOff, User } from "lucide-react";
@@ -10,8 +9,8 @@ export default function SignupPage() {
   const [form, setForm] = useState({ name: "", email: "", password: "", confirm: "" });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
-  const router = useRouter();
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -24,7 +23,7 @@ export default function SignupPage() {
       setError("Passwords do not match.");
       return;
     }
-    router.push("/");
+    setSubmitted(true);
   }
 
   return (
@@ -41,20 +40,21 @@ export default function SignupPage() {
         <div className="absolute top-1/4 right-0 w-80 h-80 rounded-full blur-3xl opacity-20" style={{ background: "rgba(1,140,129,0.8)" }} />
         <div className="absolute bottom-1/4 left-0 w-64 h-64 rounded-full blur-3xl opacity-15" style={{ background: "rgba(168,227,4,0.7)" }} />
 
-        {/* Logo */}
-        <Link href="/" className="relative flex items-center gap-3 z-10">
-          <Image src="/images/greenHorizonLogo.png" alt="GreenHorizon" width={40} height={40} className="object-contain" />
-          <span className="text-white font-bold text-lg">GreenHorizon</span>
-        </Link>
+        {/* Logo + Quote grouped */}
+        <div className="relative z-10 flex flex-col gap-10 justify-center flex-1">
+          <Link href="/" className="flex items-center gap-3">
+            <Image src="/images/greenHorizonLogo.png" alt="GreenHorizon" width={40} height={40} className="object-contain" />
+            <span className="text-white font-bold text-lg">GreenHorizon</span>
+          </Link>
 
-        {/* Quote */}
-        <div className="relative z-10">
-          <p className="text-white font-extrabold leading-tight mb-4" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)" }}>
-            Green begins<br />with <span className="gradient-text">one.</span><br />That one is you.
-          </p>
-          <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-            Join thousands of young people taking small steps toward a greener future.
-          </p>
+          <div>
+            <p className="text-white font-extrabold leading-tight mb-4" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)" }}>
+              Green begins<br />with <span className="gradient-text">one.</span><br />That one is you.
+            </p>
+            <p className="text-white/60 text-sm leading-relaxed max-w-xs">
+              Join thousands of young people taking small steps toward a greener future.
+            </p>
+          </div>
         </div>
 
         {/* Bottom tagline */}

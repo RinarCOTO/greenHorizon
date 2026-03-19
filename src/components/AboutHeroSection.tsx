@@ -11,7 +11,7 @@ export default function AboutHeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 lg:px-10 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-10 overflow-hidden">
 
       {/* Background image */}
       <Image
@@ -43,14 +43,14 @@ export default function AboutHeroSection() {
         {/* Headline */}
         <h1
           className={`font-extrabold leading-tight text-white mb-6 ${visible ? "animate-fade-up delay-100" : "opacity-0"}`}
-          style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)" }}
+          style={{ fontSize: "clamp(2rem, 6vw, 5rem)" }}
         >
           More than a website.<br />
           <span className="gradient-text">A movement that starts with you.</span>
         </h1>
 
         {/* Body */}
-        <p className={`text-white/65 text-lg leading-relaxed max-w-3xl mx-auto ${visible ? "animate-fade-up delay-200" : "opacity-0"}`}>
+        <p className={`text-white/65 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto ${visible ? "animate-fade-up delay-200" : "opacity-0"}`}>
           Green Horizon is a climate awareness platform built on one simple belief: that real change doesn&apos;t wait for governments or corporations to act first. It starts with one person, one habit, one decision. We are here to make that first step as easy as possible for every student, every young person, and every individual who wants to be part of the solution.
         </p>
 

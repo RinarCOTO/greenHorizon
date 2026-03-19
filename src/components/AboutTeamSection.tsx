@@ -51,13 +51,13 @@ export default function AboutTeamSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 lg:py-32 px-6 lg:px-10"
+      className="py-16 lg:py-32 px-4 sm:px-6 lg:px-10"
       style={{ background: "linear-gradient(135deg, #e8f5e9, #d4eedb)" }}
     >
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
+        <div className="text-center max-w-2xl mx-auto mb-10 lg:mb-20">
           <div className={`inline-flex items-center gap-3 mb-5 ${visible ? "animate-fade-down delay-100" : "opacity-0"}`}>
             <div className="h-px w-10" style={{ background: "linear-gradient(90deg, rgba(1,140,129,1), rgba(168,227,4,1))" }} />
             <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#269f62" }}>The People Behind It</span>
@@ -69,13 +69,16 @@ export default function AboutTeamSection() {
           >
             Meet the <span className="gradient-text">Team</span>
           </h2>
-          <p className={`text-gray-500 leading-relaxed ${visible ? "animate-fade-up delay-200" : "opacity-0"}`}>
+          <p className={`text-gray-500 leading-relaxed mb-4 ${visible ? "animate-fade-up delay-200" : "opacity-0"}`}>
             Green Horizon was created by three students who believe that young people have the power to drive real environmental change. This platform is their answer to a world that needs more voices, more action, and more hope.
+          </p>
+          <p className={`text-gray-500 leading-relaxed ${visible ? "animate-fade-up delay-300" : "opacity-0"}`}>
+            Cendana, Dacumos, and Quedim are Grade 12 students from Section Kintanar who developed this platform as a requirement for their subject CONICT. What began as a school project grew into something far more meaningful: a genuine commitment to raising climate awareness among the youth and proving that even students, from inside a classroom, can create something that matters.
           </p>
         </div>
 
         {/* Team cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {team.map((member, i) => (
             <div
               key={member.name}
@@ -85,7 +88,7 @@ export default function AboutTeamSection() {
               <div className="h-full rounded-3xl bg-white overflow-hidden flex flex-col">
 
                 {/* Photo */}
-                <div className="relative w-full h-96 bg-gray-100 overflow-hidden">
+                <div className="relative w-full h-72 sm:h-80 md:h-72 lg:h-96 bg-gray-100 overflow-hidden">
                   <Image
                     src={member.photo}
                     alt={member.name}

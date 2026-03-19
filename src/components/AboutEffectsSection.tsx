@@ -48,13 +48,13 @@ export default function AboutEffectsSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 lg:py-32 px-6 lg:px-10"
+      className="py-16 lg:py-32 px-4 sm:px-6 lg:px-10"
       style={{ background: "linear-gradient(135deg, #0a1f0f 0%, #0d3320 50%, #1a5c2a 100%)" }}
     >
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
-        <div className="max-w-3xl mb-16 lg:mb-20">
+        <div className="max-w-3xl mb-10 lg:mb-20">
           {/* Eyebrow */}
           <div className={`flex items-center gap-3 mb-5 ${visible ? "animate-fade-down delay-100" : "opacity-0"}`}>
             <div className="h-px w-10" style={{ background: "linear-gradient(90deg, rgba(1,140,129,1), rgba(168,227,4,1))" }} />
@@ -77,7 +77,7 @@ export default function AboutEffectsSection() {
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {effects.map((effect, i) => (
             <div
               key={effect.title}
@@ -89,7 +89,7 @@ export default function AboutEffectsSection() {
                 style={{ background: "rgba(255,255,255,0.06)" }}
               >
                 {/* Image */}
-                <div className="relative w-full h-80 shrink-0 bg-white/10">
+                <div className="relative w-full h-56 sm:h-72 md:h-64 lg:h-80 shrink-0 bg-white/10">
                   <Image
                     src={effect.image}
                     alt={effect.title}
