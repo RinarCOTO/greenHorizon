@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Mail, Globe, Instagram } from "lucide-react";
 import Footer from "@/components/Footer";
 
 export default function ContactPage() {
@@ -63,19 +64,19 @@ export default function ContactPage() {
               <div className="flex flex-col gap-6">
                 {[
                   {
-                    icon: "📧",
+                    icon: <Mail size={18} strokeWidth={1.8} />,
                     label: "Email",
                     value: "info@greenbeginswithone.org",
                     href: "mailto:info@greenbeginswithone.org",
                   },
                   {
-                    icon: "🌐",
+                    icon: <Globe size={18} strokeWidth={1.8} />,
                     label: "Website",
                     value: "www.greenbeginswithone.org",
                     href: "#",
                   },
                   {
-                    icon: "📱",
+                    icon: <Instagram size={18} strokeWidth={1.8} />,
                     label: "Instagram",
                     value: "@greenbeginswithone",
                     href: "#",
@@ -83,7 +84,7 @@ export default function ContactPage() {
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-4">
                     <div
-                      className="w-11 h-11 rounded-2xl flex items-center justify-center text-lg shrink-0"
+                      className="w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 text-green-700"
                       style={{ background: "linear-gradient(135deg, rgba(1,140,129,0.12), rgba(168,227,4,0.12))", border: "1px solid rgba(38,159,98,0.2)" }}
                     >
                       {item.icon}
