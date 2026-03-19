@@ -22,46 +22,47 @@ export default function ContactPage() {
       <main className="min-h-screen" style={{ background: "#f8faf8" }}>
 
         {/* Hero */}
-        <section className="relative py-32 sm:py-40 px-5 sm:px-6 lg:px-10 overflow-hidden" style={{ background: "linear-gradient(135deg, #0a1f0f 0%, #0d3320 50%, #1a5c2a 100%)" }}>
-          {/* Glow orbs */}
-          <div className="absolute top-0 left-1/4 w-72 h-72 rounded-full blur-3xl opacity-20 pointer-events-none" style={{ background: "rgba(1,140,129,0.8)" }} />
-          <div className="absolute bottom-0 right-1/4 w-60 h-60 rounded-full blur-3xl opacity-15 pointer-events-none" style={{ background: "rgba(168,227,4,0.7)" }} />
-          {/* Dot grid */}
+        <section
+          className="relative py-28 sm:py-36 px-5 sm:px-6 lg:px-10 overflow-hidden"
+          style={{ background: "linear-gradient(135deg, #0a1f0f 0%, #0d3320 50%, #1a5c2a 100%)" }}
+        >
+          <div className="absolute top-0 left-1/4 w-48 h-48 sm:w-72 sm:h-72 rounded-full blur-3xl opacity-20 pointer-events-none" style={{ background: "rgba(1,140,129,0.8)" }} />
+          <div className="absolute bottom-0 right-1/4 w-40 h-40 sm:w-60 sm:h-60 rounded-full blur-3xl opacity-15 pointer-events-none" style={{ background: "rgba(168,227,4,0.7)" }} />
           <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle, rgba(168,227,4,0.6) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
 
           <div className="relative max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full border border-white/15 bg-white/5 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 mb-5 sm:mb-6 px-4 py-2 rounded-full border border-white/15 bg-white/5 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "linear-gradient(90deg, rgba(1,140,129,1), rgba(168,227,4,1))" }} />
               <span className="text-white/70 text-xs font-medium tracking-wide">Get in Touch</span>
             </div>
-            <h1 className="font-extrabold text-white leading-tight mb-4" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}>
+            <h1 className="font-extrabold text-white leading-tight mb-4" style={{ fontSize: "clamp(2rem, 6vw, 4.5rem)" }}>
               We&apos;d love to<br />
               <span className="gradient-text">hear from you.</span>
             </h1>
-            <p className="text-white/65 text-lg leading-relaxed max-w-xl mx-auto">
+            <p className="text-white/65 text-base sm:text-lg leading-relaxed max-w-xl mx-auto px-2">
               Whether you have a question, want to collaborate, or just want to say hi — our inbox is always open.
             </p>
           </div>
         </section>
 
         {/* Content */}
-        <section className="py-16 sm:py-20 lg:py-24 px-5 sm:px-6 lg:px-10">
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-16 items-start">
+        <section className="py-12 sm:py-16 lg:py-24 px-5 sm:px-6 lg:px-10">
+          <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_1.4fr] gap-10 sm:gap-12 lg:gap-16 items-start">
 
             {/* Left — contact info */}
             <div>
-              <div className="flex items-center gap-3 mb-5">
+              <div className="flex items-center gap-3 mb-4 sm:mb-5">
                 <div className="h-px w-10" style={{ background: "linear-gradient(90deg, rgba(1,140,129,1), rgba(168,227,4,1))" }} />
                 <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#269f62" }}>Contact Info</span>
               </div>
-              <h2 className="font-extrabold text-[clamp(1.5rem,3vw,2.2rem)] text-gray-900 leading-tight mb-4">
+              <h2 className="font-extrabold text-[clamp(1.4rem,3vw,2.2rem)] text-gray-900 leading-tight mb-3 sm:mb-4">
                 Let&apos;s start a conversation.
               </h2>
-              <p className="text-gray-500 leading-relaxed mb-10">
+              <p className="text-gray-500 leading-relaxed mb-8 sm:mb-10 text-sm sm:text-base">
                 Have questions about our platform, want to collaborate on a campaign, or interested in partnering with us? Fill out the form and we&apos;ll get back to you as soon as we can.
               </p>
 
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-5 sm:gap-6">
                 {[
                   {
                     icon: <Mail size={18} strokeWidth={1.8} />,
@@ -82,16 +83,16 @@ export default function ContactPage() {
                     href: "#",
                   },
                 ].map((item) => (
-                  <div key={item.label} className="flex items-start gap-4">
+                  <div key={item.label} className="flex items-center gap-4">
                     <div
                       className="w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 text-green-700"
                       style={{ background: "linear-gradient(135deg, rgba(1,140,129,0.12), rgba(168,227,4,0.12))", border: "1px solid rgba(38,159,98,0.2)" }}
                     >
                       {item.icon}
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-0.5">{item.label}</p>
-                      <a href={item.href} className="text-gray-700 font-medium hover:text-green-600 transition-colors text-sm">
+                      <a href={item.href} className="text-gray-700 font-medium hover:text-green-600 transition-colors text-sm break-all">
                         {item.value}
                       </a>
                     </div>
@@ -100,7 +101,7 @@ export default function ContactPage() {
               </div>
 
               {/* Social row */}
-              <div className="mt-10 pt-8 border-t border-gray-100">
+              <div className="mt-8 sm:mt-10 pt-7 sm:pt-8 border-t border-gray-100">
                 <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Follow Us</p>
                 <div className="flex gap-3">
                   {[
@@ -112,7 +113,7 @@ export default function ContactPage() {
                       key={s.label}
                       href="#"
                       aria-label={s.label}
-                      className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-green-600 hover:border-green-300 transition-all duration-200"
+                      className="w-11 h-11 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-green-600 hover:border-green-300 transition-all duration-200"
                     >
                       {s.icon}
                     </a>
@@ -122,9 +123,9 @@ export default function ContactPage() {
             </div>
 
             {/* Right — form */}
-            <div className="bg-white rounded-3xl p-7 sm:p-10 shadow-sm border border-gray-100">
+            <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm border border-gray-100">
               {submitted ? (
-                <div className="text-center py-10">
+                <div className="text-center py-8 sm:py-10">
                   <div className="w-16 h-16 rounded-full mx-auto mb-5 flex items-center justify-center text-2xl" style={{ background: "linear-gradient(135deg, rgba(1,140,129,0.15), rgba(168,227,4,0.15))" }}>
                     🌱
                   </div>
@@ -132,8 +133,8 @@ export default function ContactPage() {
                   <p className="text-gray-500 text-sm leading-relaxed">Thanks for reaching out. We&apos;ll get back to you within 1–2 business days.</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col gap-5" suppressHydrationWarning>
-                  <div className="grid sm:grid-cols-2 gap-5">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:gap-5" suppressHydrationWarning>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                     <div>
                       <label className="block text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Name</label>
                       <input
@@ -143,7 +144,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         required
                         placeholder="Your name"
-                        className="w-full px-5 py-3.5 rounded-2xl border border-gray-200 text-sm text-gray-800 placeholder-gray-400 outline-none focus:border-green-400 transition-colors"
+                        className="w-full px-4 sm:px-5 py-3.5 rounded-2xl border border-gray-200 text-sm text-gray-800 placeholder-gray-400 outline-none focus:border-green-400 transition-colors"
                       />
                     </div>
                     <div>
@@ -155,7 +156,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         required
                         placeholder="you@email.com"
-                        className="w-full px-5 py-3.5 rounded-2xl border border-gray-200 text-sm text-gray-800 placeholder-gray-400 outline-none focus:border-green-400 transition-colors"
+                        className="w-full px-4 sm:px-5 py-3.5 rounded-2xl border border-gray-200 text-sm text-gray-800 placeholder-gray-400 outline-none focus:border-green-400 transition-colors"
                       />
                     </div>
                   </div>
@@ -167,7 +168,7 @@ export default function ContactPage() {
                       value={form.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-5 py-3.5 rounded-2xl border border-gray-200 text-sm text-gray-800 outline-none focus:border-green-400 transition-colors bg-white"
+                      className="w-full px-4 sm:px-5 py-3.5 rounded-2xl border border-gray-200 text-sm text-gray-800 outline-none focus:border-green-400 transition-colors bg-white"
                     >
                       <option value="" disabled>Select a subject</option>
                       <option>General Inquiry</option>
@@ -187,13 +188,13 @@ export default function ContactPage() {
                       required
                       rows={5}
                       placeholder="Write your message here..."
-                      className="w-full px-5 py-3.5 rounded-2xl border border-gray-200 text-sm text-gray-800 placeholder-gray-400 outline-none focus:border-green-400 transition-colors resize-none"
+                      className="w-full px-4 sm:px-5 py-3.5 rounded-2xl border border-gray-200 text-sm text-gray-800 placeholder-gray-400 outline-none focus:border-green-400 transition-colors resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-full text-sm font-bold text-white transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5"
+                    className="w-full py-3.5 sm:py-4 rounded-full text-sm font-bold text-white transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5"
                     style={{ background: "linear-gradient(90deg, rgba(1,140,129,1) 0%, rgba(168,227,4,1) 75%, rgba(200,240,20,1) 100%)" }}
                   >
                     Send Message
