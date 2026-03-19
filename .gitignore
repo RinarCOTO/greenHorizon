@@ -39,3 +39,24 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# secrets & credentials
+*.key
+*.secret
+*.p12
+*.pfx
+secrets.json
+credentials.json
+service-account*.json
+firebase*.json
+*-service-account*.json
+
+# IDE / OS
+.claude/
+.idea/
+.vscode/settings.json
+Thumbs.db
+
+# logs
+*.log
+logs/
