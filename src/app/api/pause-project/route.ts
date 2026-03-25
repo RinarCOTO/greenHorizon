@@ -1,15 +1,12 @@
 export async function POST() {
-  const projectId = process.env.VERCEL_PROJECT_ID;
-  const teamId = process.env.VERCEL_TEAM_ID;
+  const projectId = "prj_SV42Ai4i8ICUNGBqHPzmuQLaQvB4";
   const token = process.env.VERCEL_TOKEN;
 
-  if (!projectId || !token) {
-    return new Response("Missing VERCEL_PROJECT_ID or VERCEL_TOKEN", { status: 500 });
+  if (!token) {
+    return new Response("Missing VERCEL_TOKEN", { status: 500 });
   }
 
-  const route = teamId
-    ? `${projectId}/pause?teamId=${teamId}`
-    : `${projectId}/pause`;
+  const route = `${projectId}/pause`;
 
   const res = await fetch(`https://api.vercel.com/v1/projects/${route}`, {
     method: "POST",
